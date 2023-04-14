@@ -1,0 +1,8 @@
+<div class="city-container">
+    <img [src]="city.image">
+    <div class="name">{{city.name}}</div>
+    <div class="description">{{city.description}}</div>
+    <div>
+        <button class="visit-button" (click)="emitCity()">VISIT NOW!</button>
+    </div>
+</div>

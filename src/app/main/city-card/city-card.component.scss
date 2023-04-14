@@ -1,0 +1,50 @@
+.city-container
+{
+    margin:5%;
+    border-radius: 20px;
+    background-color: white;
+}
+
+
+img{
+
+    width:100%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    
+
+}
+
+.name
+{
+    font-family: 'Lucida Sans';
+    color:#249c3a;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top: 3%;
+    padding-left: 2%;
+
+}
+
+.description
+{
+    font-family: 'Arial Narrow';
+    text-align: justify;
+    font-size: 13px;
+    padding: 3%;;
+}
+
+.visit-button
+{
+    margin-left: 3%;
+    margin-bottom: 2%;
+    padding: 5px;
+    background-color: #249c3a;
+    color: whitesmoke;
+    border-radius: 10px;
+}
+
+.visit-button:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

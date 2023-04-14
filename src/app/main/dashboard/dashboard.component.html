@@ -1,0 +1,54 @@
+<div class="header">
+     <div id="motto">Discover the colorful world</div>
+     <h1 [innerText]="emittedCity"></h1>
+     <hr id="separator">
+
+     <div id="quote">One's destination is never a place, but a new way of seeing things. - Henry Miller</div>
+<a href="https://visitpoland.eu/" target="_blank">
+     <button class="discover-button">Discover now</button>
+    </a> 
+
+</div>
+
+<div class="content">
+        <div class="search-area">
+                <h3>Search & Book all our destinations</h3>
+                <div> 
+                        <input  placeholder="Select your city"  [(ngModel)]="search" (input)="setSearch(search)">
+                </div>               
+                <div class="cities-area">
+                        
+                        <app-city-card *ngFor="let city of filteredCities"   [city]="city" (cityEmiter)="setReceivedCity($event)">
+                        </app-city-card>
+                        <div *ngIf="filteredCities.length==0 && search!=''" class="not-found">No results</div>
+                </div>
+                
+               
+        </div>
+<div class="services">
+ <div class="title">
+ <h2>Our services</h2>
+ <hr>
+</div>
+<div class="services-area">       
+        <app-service-card  *ngFor="let service of ourservices" [service]="service">
+        </app-service-card>
+
+</div>
+</div>
+<div class="destinations">
+        <div class="page-controls" *ngIf="this.cities.length>6">
+                <button class="control-button" (click)="prevPage()" [disabled]="disabledPrev"> &lt; </button>
+                <button class="control-button"  (click)="nextPage()" [disabled]="disabledNext">&gt;</button>
+        </div>
+        <div class="title">
+                <h2>Most popular</h2>
+                <hr>
+               </div> 
+
+<div class="cities-area">
+        <app-city-card *ngFor="let city of getCitiesOnPage(this.page)" [city]="city" (cityEmiter)="setReceivedCity($event)">
+        </app-city-card>
+</div>
+</div>
+</div>
